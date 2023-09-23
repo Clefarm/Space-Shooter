@@ -1,17 +1,18 @@
 [gd_scene load_steps=3 format=3 uid="uid://tbwwy72rb7iq"]
 
-[ext_resource type="Texture2D" uid="uid://d4hos0mc23r33" path="res://Assets/kenney_space-shooter-redux/PNG/playerShip1_orange.png" id="1_dmxcp"]
-[ext_resource type="Script" path="res://Player/Player.gd" id="1_ikda8"]
+[ext_resource type="PackedScene" uid="uid://dtv4x0p1veudh" path="res://Player/player.tscn" id="1_7g3b0"]
+[ext_resource type="PackedScene" uid="uid://dj4tc0fsq0r5n" path="res://Asteroid/asteroid.tscn" id="2_sy77h"]
 
 [node name="Game" type="Node2D"]
 
-[node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(512, 300)
-script = ExtResource("1_ikda8")
-metadata/_edit_group_ = true
+[node name="Player" parent="." instance=ExtResource("1_7g3b0")]
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-texture = ExtResource("1_dmxcp")
+[node name="Asteroid_Container" type="Node2D" parent="."]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player"]
-polygon = PackedVector2Array(12.5, -34.9, 16.2, -14.5, 17.1, -14.5, 35.8, -2.7, 42.6, -10.5, 49.3, -10.5, 49.5, 24.7, 46.6, 29.5, 42.7, 29.5, 39.7, 26.5, 16.4, 31.2, 11.9, 37.5, -12.2, 37.5, -18.4, 30.5, -22.8, 30.5, -39.8, 25.5, -45.2, 29.8, -47.5, 28.8, -47.5, 27.3, -49.5, 25.3, -49.5, -9.5, -48.9, -9.5, -41.5, -10.9, -41.5, -8.4, -35.9, -3.5, -17.5, -12.8, -12.5, -34.9, -12.5, -37.5, 12.5, -37.5)
+[node name="Asteroid" parent="Asteroid_Container" instance=ExtResource("2_sy77h")]
+position = Vector2(100, 100)
+
+[node name="Asteroid2" parent="Asteroid_Container" instance=ExtResource("2_sy77h")]
+position = Vector2(900, 600)
+
+[node name="Effects" type="Node2D" parent="."]

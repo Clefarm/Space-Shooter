@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6xn8wd7kh4de"]
+
+[ext_resource type="Script" path="res://Player/Bullet.gd" id="1_0l36g"]
+[ext_resource type="Texture2D" uid="uid://kbqvhjox2rx8" path="res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserRed05.png" id="2_1335m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ur6ll"]
+radius = 12.0
+
+[node name="Bullet" type="Area2D"]
+script = ExtResource("1_0l36g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_1335m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ur6ll")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj4tc0fsq0r5n"]
+
+[ext_resource type="Script" path="res://Asteroid/Asteroid.gd" id="1_d1tdp"]
+[ext_resource type="Texture2D" uid="uid://bwsllbdl0x627" path="res://Assets/kenney_space-shooter-redux/PNG/Meteors/meteorBrown_med1.png" id="2_kpgy3"]
+
+[node name="Asteroid" type="CharacterBody2D"]
+script = ExtResource("1_d1tdp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_kpgy3")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(21.5, -17.5, 21.5, 12.5, 8, 21.5, -12.2, 21.5, -16.5, 19.9, -16.5, 18, -21.5, 8.7, -21.5, -10.5, -13.5, -21.2, 19.5, -21.5)
