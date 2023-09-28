@@ -1,0 +1,114 @@
+[gd_scene load_steps=17 format=3 uid="uid://d1s8ftxl3mocx"]
+
+[ext_resource type="Texture2D" uid="uid://b0jxjb23jgnvr" path="res://Assets/kenney_space-shooter-redux/pngegg.png" id="1_afnlc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s43tu"]
+atlas = ExtResource("1_afnlc")
+region = Rect2(0, 0, 180, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehdtc"]
+atlas = ExtResource("1_afnlc")
+region = Rect2(180, 0, 180, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_twehw"]
+atlas = ExtResource("1_afnlc")
+region = Rect2(360, 0, 180, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxnwo"]
+atlas = ExtResource("1_afnlc")
+region = Rect2(540, 0, 180, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1i0jr"]
+atlas = ExtResource("1_afnlc")
+region = Rect2(720, 0, 180, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v5nrw"]
+atlas = ExtResource("1_afnlc")
+region = Rect2(0, 179, 180, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7eho"]
+atlas = ExtResource("1_afnlc")
+region = Rect2(180, 179, 180, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2w6mw"]
+atlas = ExtResource("1_afnlc")
+region = Rect2(360, 179, 180, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpg1e"]
+atlas = ExtResource("1_afnlc")
+region = Rect2(540, 179, 180, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckyt1"]
+atlas = ExtResource("1_afnlc")
+region = Rect2(720, 179, 180, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0qji"]
+atlas = ExtResource("1_afnlc")
+region = Rect2(0, 358, 180, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmwqb"]
+atlas = ExtResource("1_afnlc")
+region = Rect2(180, 358, 180, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxpiq"]
+atlas = ExtResource("1_afnlc")
+region = Rect2(360, 358, 180, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0ljt"]
+atlas = ExtResource("1_afnlc")
+region = Rect2(540, 358, 180, 179)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eje7d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s43tu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehdtc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_twehw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxnwo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1i0jr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v5nrw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s7eho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2w6mw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpg1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ckyt1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0qji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmwqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxpiq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0ljt")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Explosion" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_eje7d")
+frame = 13
+frame_progress = 1.0
