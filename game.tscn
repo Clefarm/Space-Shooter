@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://tbwwy72rb7iq"]
+[gd_scene load_steps=11 format=3 uid="uid://tbwwy72rb7iq"]
 
 [ext_resource type="PackedScene" uid="uid://dtv4x0p1veudh" path="res://Player/player.tscn" id="1_7g3b0"]
+[ext_resource type="Texture2D" uid="uid://b8otjldm0kdhy" path="res://Assets/kenney_space-shooter-redux/PNG/Enemies/ROBOXEL-Space_Backgrounds/ROBOXEL-Space_Backgrounds/PNG/DigitalWytch-SpaceBackground04.png" id="1_h3wrc"]
 [ext_resource type="PackedScene" uid="uid://dj4tc0fsq0r5n" path="res://Asteroid/asteroid.tscn" id="2_sy77h"]
 [ext_resource type="Script" path="res://Player/Player_Container.gd" id="2_yy82b"]
 [ext_resource type="PackedScene" uid="uid://5m2coqwvw18i" path="res://Enemy/enemy.tscn" id="3_k7l3x"]
@@ -11,6 +12,10 @@
 [ext_resource type="Script" path="res://UI/Menu.gd" id="7_hxpb7"]
 
 [node name="Game" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(604, 276)
+texture = ExtResource("1_h3wrc")
 
 [node name="Asteroid_Container" type="Node2D" parent="."]
 
