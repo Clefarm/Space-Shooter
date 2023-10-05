@@ -2,6 +2,7 @@
 Project 2 for MSCH-C220
 
 Description
+This is a simple space shooter game created by Cleveland Farmer for game designing practice
 
 ## Implementation
 Font Link : https://www.dafont.com/edo-sz.font?back=theme
