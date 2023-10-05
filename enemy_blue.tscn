@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://couliqd3jorow"]
+
+[ext_resource type="Script" path="res://Enemy Blue/Enemy_Blue.gd" id="1_sedm4"]
+[ext_resource type="Texture2D" uid="uid://2kygjpv35okq" path="res://Assets/kenney_space-shooter-redux/PNG/Enemies/enemyBlue3.png" id="2_64ayu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yci8b"]
+radius = 40.0125
+
+[node name="Enemy_Blue" type="CharacterBody2D"]
+position = Vector2(0, 648)
+script = ExtResource("1_sedm4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_64ayu")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(1, 1)
+polygon = PackedVector2Array(27.5, -39.6, 27.5, -37.7, 51.5, -9.1, 51.5, 9.8, 42.6, 42, 24.5, 42, 22.8, 31, 21.1, 31, 14.9, 28.7, 10.7, 37, -11.5, 37, -11.5, 34.5, -14.5, 28.5, -25.5, 31.5, -25.5, 42, -42.5, 42, -42.5, 41.3, -51.5, 14.3, -51.5, -9, -27.5, -40, -17.2, -40, -14.5, -42, 16.7, -42)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-91, 236)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(91, -236)
+shape = SubResource("CircleShape2D_yci8b")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

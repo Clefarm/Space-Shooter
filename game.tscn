@@ -1,11 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://tbwwy72rb7iq"]
+[gd_scene load_steps=10 format=3 uid="uid://tbwwy72rb7iq"]
 
 [ext_resource type="PackedScene" uid="uid://dtv4x0p1veudh" path="res://Player/player.tscn" id="1_7g3b0"]
 [ext_resource type="PackedScene" uid="uid://dj4tc0fsq0r5n" path="res://Asteroid/asteroid.tscn" id="2_sy77h"]
 [ext_resource type="Script" path="res://Player/Player_Container.gd" id="2_yy82b"]
 [ext_resource type="PackedScene" uid="uid://5m2coqwvw18i" path="res://Enemy/enemy.tscn" id="3_k7l3x"]
+[ext_resource type="PackedScene" uid="uid://couliqd3jorow" path="res://enemy_blue.tscn" id="5_7ryel"]
 [ext_resource type="FontFile" uid="uid://b322x656wpw44" path="res://Assets/edo_sz/edosz.ttf" id="5_hhmeh"]
 [ext_resource type="Script" path="res://HUD.gd" id="5_xd8n4"]
+[ext_resource type="PackedScene" uid="uid://c7a4auj8f4v7r" path="res://enemy_black.tscn" id="6_yabbt"]
 [ext_resource type="Script" path="res://UI/Menu.gd" id="7_hxpb7"]
 
 [node name="Game" type="Node2D"]
@@ -29,6 +31,14 @@ script = ExtResource("2_yy82b")
 
 [node name="Enemy" parent="Enemy_Container" instance=ExtResource("3_k7l3x")]
 position = Vector2(300, 600)
+
+[node name="Enemy_Blue_Container" type="Node2D" parent="."]
+
+[node name="Enemy_Blue" parent="Enemy_Blue_Container" instance=ExtResource("5_7ryel")]
+
+[node name="Enemy_Black_Container" type="Node2D" parent="."]
+
+[node name="Enemy_Black" parent="Enemy_Black_Container" instance=ExtResource("6_yabbt")]
 
 [node name="UI" type="CanvasLayer" parent="."]
 

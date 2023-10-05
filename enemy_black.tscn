@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7a4auj8f4v7r"]
+
+[ext_resource type="Script" path="res://Enemy_Black/Enemy_Black.gd" id="1_vnrb0"]
+[ext_resource type="Texture2D" uid="uid://doagm50tying4" path="res://Assets/kenney_space-shooter-redux/PNG/Enemies/enemyBlack4.png" id="2_hss8q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7pn8b"]
+radius = 41.1096
+
+[node name="Enemy_Black" type="CharacterBody2D"]
+position = Vector2(0, 428)
+script = ExtResource("1_vnrb0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_hss8q")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(41, -33.3, 41, 24, 17, 38.1, 17, 39.6, 15.4, 42, -15, 42, -16.3, 39, -17.6, 39, -41, 24.4, -41, -33.3, -25.2, -42, -3, -42, -3, -41, -2.3, -37, 2, -37, 2, -42, 25.2, -42)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.3
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_7pn8b")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
