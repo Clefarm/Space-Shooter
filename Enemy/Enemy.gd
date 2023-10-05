@@ -16,7 +16,7 @@ func _ready():
 func _physics_process(_delta):
 	position += direction
 	position.y = initial_position.y + sin(position.x/20)*wobble
-	if position.x > 1200:
+	if position.x > Global.VP.x + 100:
 		queue_free()
 
 
@@ -28,12 +28,13 @@ func _on_timer_timeout():
 		var bullet = Bullet.instantiate()
 		var d =global_position.angle_to_point(Player.global_position) + PI/2
 		bullet.rotation = d
-		bullet.global_position = global_position + Vector2(0,-40).rotated(d)
+		bullet.global_position = global_position + Vector2(0,-80).rotated(d)
 		Effects.add_child(bullet)
 
 func damage(d):
 	health -= d
 	if health <= 0:
+		Global.update_score(500)
 		queue_free()
 
 func _on_area_2d_body_entered(body):

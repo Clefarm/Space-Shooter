@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsaxktk8p3y7f"]
+
+[ext_resource type="Texture2D" uid="uid://d4hos0mc23r33" path="res://Assets/kenney_space-shooter-redux/PNG/playerShip1_orange.png" id="1_oi0oc"]
+
+[node name="Indicator" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_oi0oc")
