@@ -15,6 +15,18 @@ Space Shooter (Redux, plus fonts and sounds) by Kenney Vleugels (www.kenney.nl)
 
 	You may use these graphics in personal and commercial projects.
 	Credit (Kenney or www.kenney.nl) would be nice but is not mandatory.
+ 
+ 
+ 
+ Background
+ "Thanks for your download!!!"
+"Made by + ROBOXEL +"
+
+"You can use these files for personal and commercial purpose."
+"Any information you want, please write to roboxel.net@gmail.com"
+
+"For more assets:"
+"http://www.roboxel.itch.io"
 
 ## What Makes this a Game?
 
